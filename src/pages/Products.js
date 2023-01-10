@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Product from '../components/Product'
 import productService from '../services/getProducts'
 
-const Products = ({cart}) => {
+const Products = ({cart, addTo}) => {
   const [items,setItems] = useState([])
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Products = ({cart}) => {
   return (
     <>
     {items.map(item => (
-      <Product key={item.id} item={item} cart={cart}/>
+      <Product key={item.id} item={item} cart={cart} addTo={addTo}/>
     ))}
     </>
   )

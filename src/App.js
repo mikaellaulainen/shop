@@ -11,14 +11,23 @@ import Summary from './pages/Summary'
 
 const App = () => {
   const [cart,setCart]= useState([])
-  
+
+  const addTo = (item,amount) => {
+    const cartItem = {
+      itemid: item.id,
+      name:item.name,
+      price: item.price,
+      amount:amount
+    }
+    setCart(cart.concat(cartItem))
+  } 
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Home/>}/>
-          <Route path='products' element={<Products cart={cart}/>}/>
+          <Route path='products' element={<Products cart={cart} addTo={addTo}/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='cart' element={<Cart cart={cart}/>}/>
