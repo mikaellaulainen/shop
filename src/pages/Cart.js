@@ -5,9 +5,11 @@ const Cart = ({cart}) => {
   console.log(cart)
   return (
     <>
-      <p>Welcome to Cart</p>
+      {cart.map(item => (
+        <p className="cart-item border m-3 p-3">{item.itemname} Amount: {item.itemid}</p>
+      ))}
       <LinkContainer to="/checkout">
-        <Button>Checkout</Button>
+        <Button className="ms-3">Checkout</Button>
       </LinkContainer>
     </>
   )

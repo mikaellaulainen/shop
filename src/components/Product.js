@@ -3,18 +3,19 @@ import { ButtonGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const Product = ({item,cart,addTo}) => {
+const Product = ({item,cart,remove,addTo}) => {
   const [amount,setAmount] = useState(0)
-  console.log(cart)
   const addToCart = (e) => {
     e.preventDefault()
     console.log(`Added ${item.name} to cart, theres now ${amount+1} of em`)
     setAmount(amount+1)
-    addTo(item,amount)
+    addTo(item,amount+1)
+    console.log(cart)
   }
   const removeFromCart = (e) => {
     e.preventDefault()
     console.log(`removed 1 ${item.name} to cart, theres now ${amount-1} of em`)
+    remove(item,amount-1)
     setAmount(amount-1)
   }
 

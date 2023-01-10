@@ -4,9 +4,11 @@ import Navbar from 'react-bootstrap/Navbar'
 import { LinkContainer } from 'react-router-bootstrap'
 const Topbar = () => {
   return (
-    <Navbar className='my-nav' expand="md">
+    <Navbar className='my-nav' variant='dark' expand="md">
       <Container>
-        <Navbar.Brand>Shop</Navbar.Brand>
+        <LinkContainer to="/">
+          <Navbar.Brand>Shop</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls='items'/>
         <Navbar.Collapse id='items'>
           <Nav className='me-auto'>

@@ -13,13 +13,28 @@ const App = () => {
   const [cart,setCart]= useState([])
 
   const addTo = (item,amount) => {
-    const cartItem = {
-      itemid: item.id,
-      name:item.name,
-      price: item.price,
-      amount:amount
+    if(cart.some(i => i.itemid === item.id)){
+      const index = cart.findIndex((i => i.itemid === item.id))
+      const newCart = cart
+      newCart[index].amount=amount
+      setCart(newCart)
+
+    }else {
+      const cartItem = {
+        itemname: item.name,
+        itemid: item.id,
+        amount:amount
+      }
+      setCart(cart.concat(cartItem))
     }
-    setCart(cart.concat(cartItem))
+  }
+  const remove = (item,amount) => {
+    console.log(item)
+    const index = cart.findIndex((i => i.itemid === item.id))
+    const newCart = cart
+    newCart[index].amount=amount
+    console.log(newCart)
+    setCart(newCart)
   } 
 
   return (
@@ -27,7 +42,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Home/>}/>
-          <Route path='products' element={<Products cart={cart} addTo={addTo}/>}/>
+          <Route path='products' element={<Products cart={cart} remove={remove} addTo={addTo}/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='cart' element={<Cart cart={cart}/>}/>
