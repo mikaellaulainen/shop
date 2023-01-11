@@ -16,16 +16,16 @@ const Topbar = () => {
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="products">
-              <Nav.Link>Products</Nav.Link>    
+              <Nav.Link>Products</Nav.Link>
             </LinkContainer>
             <LinkContainer to="contact">
               <Nav.Link>Contact</Nav.Link>
             </LinkContainer>
             <LinkContainer to="about">
-              <Nav.Link>About</Nav.Link>      
+              <Nav.Link>About</Nav.Link>
             </LinkContainer>
             <LinkContainer to="cart">
-              <Nav.Link>cart</Nav.Link>      
+              <Nav.Link>cart</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>

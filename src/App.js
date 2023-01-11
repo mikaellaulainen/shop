@@ -11,42 +11,44 @@ import Summary from './pages/Summary'
 
 const App = () => {
   const [cart,setCart]= useState([])
-  const [user,setUser] = useState([])
+  const [cartTotal,setCartTotal] = useState(0)
 
   const addTo = (item,amount) => {
-    if(cart.some(i => i.itemid === item.id)){
-      const index = cart.findIndex((i => i.itemid === item.id))
+    setCartTotal(cartTotal+Number(item.price))
+    if(cart.some(i => i.id === item.id)){
+      const index = cart.findIndex((i => i.id === item.id))
       const newCart = cart
       newCart[index].amount=amount
       setCart(newCart)
-
     }else {
       const cartItem = {
-        itemname: item.name,
-        itemid: item.id,
+        price:item.price,
+        name: item.name,
+        id: item.id,
         amount:amount
       }
       setCart(cart.concat(cartItem))
     }
   }
   const remove = (item,amount) => {
+    setCartTotal(cartTotal-item.price)
     console.log(item)
-    const index = cart.findIndex((i => i.itemid === item.id))
+    const index = cart.findIndex((i => i.id === item.id))
     const newCart = cart
     if(amount === 0){
       newCart.pop(index)
       setCart(newCart)
     }else {
-    newCart[index].amount=amount
-    console.log(amount)
-    console.log(newCart)
-    setCart(newCart)
+      newCart[index].amount=amount
+      console.log(amount)
+      console.log(newCart)
+      setCart(newCart)
     }
   }
 
   const shopper = (e) => {
     e.preventDefault()
-    console.log("we done")
+    console.log('we done')
   }
 
   return (
@@ -57,7 +59,7 @@ const App = () => {
           <Route path='products' element={<Products cart={cart} remove={remove} addTo={addTo}/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='about' element={<About/>}/>
-          <Route path='cart' element={<Cart cart={cart}/>}/>
+          <Route path='cart' element={<Cart cart={cart} cartTotal={cartTotal}/>}/>
           <Route path='checkout' element={<Checkout shopper={shopper}/>}/>
           <Route path='summary' element={<Summary/>}/>
         </Route>

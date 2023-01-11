@@ -1,14 +1,11 @@
-import { useState } from 'react';
-import { ButtonGroup } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { useState } from 'react'
+import { ButtonGroup } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 
-const Product = ({item,cart,remove,addTo}) => {
-  const [amount,setAmount] = useState(cart[cart.findIndex((i => i.itemid === item.id))] === undefined ? 0 : cart[cart.findIndex((i => i.itemid === item.id))].amount)
-  console.log(cart[cart.findIndex((i => i.itemid === item.id))] === undefined)
-  if(cart.some(i => i.itemid === item.id)){
-    console.log(cart[cart.findIndex((i => i.itemid === item.id))].amount)
-  }
+const Product = ({ item,cart,remove,addTo }) => {
+  const [amount,setAmount] = useState(cart[cart.findIndex((i => i.id === item.id))] === undefined ? 0 : cart[cart.findIndex((i => i.id === item.id))].amount)
+  console.log(cart)
   const addToCart = (e) => {
     e.preventDefault()
     console.log(`Added ${item.name} to cart, theres now ${amount+1} of em`)

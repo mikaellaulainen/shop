@@ -14,7 +14,7 @@ const Checkout = () => {
       </Form.Group>
       <Form.Group>
         <Form.Label>Postcode</Form.Label>
-      <Form.Control/>
+        <Form.Control/>
       </Form.Group>
       <Form.Group>
         <Form.Label>City</Form.Label>

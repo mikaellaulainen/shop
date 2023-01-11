@@ -9,31 +9,31 @@ let products = [
   {
     id:1,
     name:"Juice",
-    price:"2.50",
+    price:"2.40",
     instock: "30"
   },
   {
     id:2,
     name:"Coke",
-    price:"2.50",
+    price:"2.00",
     instock: "30"
   },
   {
     id:3,
     name:"Milk",
-    price:"2.50",
+    price:"2.30",
     instock: "30"
   },
   {
     id:4,
     name:"Sparkling water",
-    price:"2.50",
+    price:"1.50",
     instock: "30"
   },
   {
     id:5,
     name:"Tea",
-    price:"2.50",
+    price:"1.00",
     instock: "30"
   }
 ]
