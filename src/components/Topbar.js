@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import { LinkContainer } from 'react-router-bootstrap'
 const Topbar = () => {
   return (
-    <Navbar className='my-nav' variant='dark' expand="md">
+    <Navbar bg="dark" variant='dark' expand="md">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>Shop</Navbar.Brand>

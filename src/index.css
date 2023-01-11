@@ -1,16 +1,4 @@
-:root{
-  --dark-grey:#2f3640;
-}
-body,html{
-  width: auto;
-  height: 100%;
-  background-image: linear-gradient(black, grey);
-  background-repeat: no-repeat;
-}
-.my-nav{
-  background-color: var(--dark-grey);
-}
-.cart-item{
-  background-color: red;
-  border-radius: .5em;
+.contact{
+  font-size: 3em;
+  letter-spacing: .3em;
 }

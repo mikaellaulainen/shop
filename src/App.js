@@ -11,6 +11,7 @@ import Summary from './pages/Summary'
 
 const App = () => {
   const [cart,setCart]= useState([])
+  const [user,setUser] = useState([])
 
   const addTo = (item,amount) => {
     if(cart.some(i => i.itemid === item.id)){
@@ -32,10 +33,21 @@ const App = () => {
     console.log(item)
     const index = cart.findIndex((i => i.itemid === item.id))
     const newCart = cart
+    if(amount === 0){
+      newCart.pop(index)
+      setCart(newCart)
+    }else {
     newCart[index].amount=amount
+    console.log(amount)
     console.log(newCart)
     setCart(newCart)
-  } 
+    }
+  }
+
+  const shopper = (e) => {
+    e.preventDefault()
+    console.log("we done")
+  }
 
   return (
     <BrowserRouter>
@@ -46,7 +58,7 @@ const App = () => {
           <Route path='contact' element={<Contact/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='cart' element={<Cart cart={cart}/>}/>
-          <Route path='checkout' element={<Checkout/>}/>
+          <Route path='checkout' element={<Checkout shopper={shopper}/>}/>
           <Route path='summary' element={<Summary/>}/>
         </Route>
       </Routes>

@@ -1,8 +1,13 @@
-import React from 'react'
+import Button from 'react-bootstrap/Button'
 
 const Summary = () => {
   return (
-    <div>Summary</div>
+    <>
+      <p>Products</p>
+      <p>Order info</p>
+      <p>Total:</p>
+      <Button>Order</Button>
+    </>
   )
 }
 
