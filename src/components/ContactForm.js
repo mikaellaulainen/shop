@@ -3,24 +3,24 @@ import Form from 'react-bootstrap/Form'
 
 const ContactForm = () => {
   return (
-    <Form className="m-3 p-3 border">
+    <Form className="mx-sm-auto text-start contact-form m-3 p-3 col-sm-9 col-md-8 col-lg-4">
       <Form.Group>
-        <Form.Label>First name</Form.Label>
+        <Form.Label>Firstname:</Form.Label>
         <Form.Control/>
       </Form.Group>
       <Form.Group>
-        <Form.Label>Lastname</Form.Label>
+        <Form.Label>Lastname:</Form.Label>
         <Form.Control/>
       </Form.Group>
       <Form.Group>
-        <Form.Label>Email address</Form.Label>
+        <Form.Label>Email address:</Form.Label>
         <Form.Control/>
       </Form.Group>
       <Form.Group>
         <Form.Label>Your message:</Form.Label>
         <Form.Control as="textarea" rows={3}/>
       </Form.Group>
-      <Button className="mt-3">Submit</Button>
+      <Button variant="dark" className="mt-3">Submit</Button>
     </Form>
   )
 }

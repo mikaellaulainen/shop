@@ -1,4 +1,13 @@
+#root{
+  background-color: red;
+  min-height: 100vh;
+}
+
 .contact{
   font-size: 3em;
   letter-spacing: .3em;
+}
+.contact-form{
+  border: 1px solid #000000;
+  border-radius: .3em;
 }

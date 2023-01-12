@@ -18,14 +18,14 @@ const Topbar = () => {
             <LinkContainer to="products">
               <Nav.Link>Products</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="cart">
+              <Nav.Link>Cart</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="contact">
               <Nav.Link>Contact</Nav.Link>
             </LinkContainer>
             <LinkContainer to="about">
               <Nav.Link>About</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="cart">
-              <Nav.Link>cart</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>

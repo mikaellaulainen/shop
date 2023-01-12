@@ -15,6 +15,7 @@ const Products = ({ cart, addTo,remove }) => {
 
   return (
     <>
+      <p className='contact text-center'>Drinks</p>
       <Row className='mx-0'>
         {items.map(item => (
           <Product key={item.id} item={item} cart={cart} remove={remove} addTo={addTo}/>
