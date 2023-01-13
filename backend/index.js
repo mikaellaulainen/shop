@@ -45,7 +45,7 @@ app.get('/api/drinks', (req,res) => {
   res.json(products)
 })
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`We are live on ${PORT}`)
 })

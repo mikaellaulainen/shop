@@ -1,13 +1,40 @@
-#root{
-  background-color: red;
-  min-height: 100vh;
+:root{
+  --orange:#F79F1F;
 }
 
+body{
+  min-height: 100vh;
+  background-color: orange;
+}
 .contact{
   font-size: 3em;
   letter-spacing: .3em;
 }
 .contact-form{
-  border: 1px solid #000000;
+  background-color: #ffffff;
   border-radius: .3em;
+  box-shadow: 0 0 0 .2em rgba(0, 0, 0, .1), .5em 0 .5em 1em rgba(0, 0, 0, .1);
+}
+.linkedin{
+  color: #ffffff;
+}
+.linkedin:hover{
+  color:#000000;
+}
+.gbl-btn{
+  border: none;
+}
+.gbl-btn:hover{
+  background-color: #ffffff;
+  color: black;
+  border: none;
+}
+
+.product-btn{
+  border: none;
+}
+.product-btn:hover{
+  background-color: var(--orange);
+  color: black;
+  border: none;
 }

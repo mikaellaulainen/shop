@@ -20,7 +20,7 @@ const ContactForm = () => {
         <Form.Label>Your message:</Form.Label>
         <Form.Control as="textarea" rows={3}/>
       </Form.Group>
-      <Button variant="dark" className="mt-3">Submit</Button>
+      <Button variant="dark" className="product-btn mt-3">Submit</Button>
     </Form>
   )
 }

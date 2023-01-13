@@ -4,7 +4,9 @@ const Summary = ({ cart,cartTotal }) => {
   //Ending shopping with alert!
   const order = (e) => {
     e.preventDefault()
-    alert(`Shopping is done total is: ${cartTotal}`)
+    if(confirm('Shopping is done!')){
+      window.location.href='/'
+    }
   }
   console.log(cart)
   return (
